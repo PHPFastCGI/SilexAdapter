@@ -28,6 +28,9 @@ use Symfony\Component\Console\Application as ConsoleApplication;
 
 // Create your Silex application
 $app = new SilexApplication;
+$app->get('/hello/{name}', function ($name) use ($app) {
+    return 'Hello ' . $app->escape($name);
+});
 
 // Dependency 1: The daemon factory
 $daemonFactory = new DaemonFactory;
