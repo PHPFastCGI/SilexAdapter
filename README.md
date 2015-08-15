@@ -20,11 +20,9 @@ Using this package, Silex applications can stay alive between HTTP requests whil
 // Include the composer autoloader
 require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
-use PHPFastCGI\FastCGIDaemon\Command\DaemonRunCommand;
-use PHPFastCGI\FastCGIDaemon\DaemonFactory;
+use PHPFastCGI\FastCGIDaemon\ApplicationFactory;
 use PHPFastCGI\Speedex\ApplicationWrapper;
 use Silex\Application as SilexApplication;
-use Symfony\Component\Console\Application as ConsoleApplication;
 
 // Create your Silex application
 $app = new SilexApplication;
@@ -32,18 +30,11 @@ $app->get('/hello/{name}', function ($name) use ($app) {
     return 'Hello ' . $app->escape($name);
 });
 
-// Dependency 1: The daemon factory
-$daemonFactory = new DaemonFactory;
-
-// Dependency 2: A kernel for the FastCGIDaemon library (from the Silex application)
+// Create the kernel for the FastCGIDaemon library (from the Silex application)
 $kernel = new ApplicationWrapper($app);
 
-// Create an instance of DaemonRunCommand using the daemon factory and the kernel
-$command = new DaemonRunCommand('run', 'Run a FastCGI daemon', $daemonFactory, $kernel);
-
-// Create a symfony console application and add the command
-$consoleApplication = new ConsoleApplication;
-$consoleApplication->add($command);
+// Create the symfony console application
+$consoleApplication = (new ApplicationFactory)->createApplication($kernel);
 
 // Run the symfony console application
 $consoleApplication->run();
