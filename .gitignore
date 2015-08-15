@@ -1,5 +1,6 @@
 /vendor/
 /build/
 /coverage/
-/composer.json
+/composer.lock
+
 
