@@ -10,6 +10,12 @@ A PHP package which allows Silex applications to reduce overheads by exposing th
 
 Using this package, Silex applications can stay alive between HTTP requests whilst operating behind the protection of a FastCGI enabled web server.
 
+## Installing
+
+```sh
+composer require "phpfastcgi/speedex:0.2.*"
+```
+
 ## Usage
 
 ```php
