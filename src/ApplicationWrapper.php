@@ -14,7 +14,7 @@ class ApplicationWrapper implements KernelInterface
     /**
      * @var Application
      */
-    protected $application;
+    private $application;
 
     /**
      * Constructor.
