@@ -12,8 +12,7 @@
     "require": {
         "php": ">=5.5.0",
         "silex/silex": "~1.0",
-        "symfony/psr-http-message-bridge": "~0.1",
-        "phpfastcgi/fastcgi-daemon": "0.4.*"
+        "phpfastcgi/fastcgi-daemon": "0.6.*"
     },
     "require-dev": {
         "satooshi/php-coveralls": "dev-master"

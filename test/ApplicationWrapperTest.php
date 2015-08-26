@@ -2,19 +2,12 @@
 
 namespace PHPFastCGI\Speedex\Tests;
 
+use PHPFastCGI\FastCGIDaemon\Http\Request;
 use PHPFastCGI\Speedex\ApplicationWrapper;
 use Silex\Application;
-use Symfony\Bridge\PsrHttpMessage\Factory\DiactorosFactory;
-use Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory;
-use Zend\Diactoros\ServerRequestFactory;
 
 class ApplicationWrapperTest extends \PHPUnit_Framework_TestCase
 {
-    private function getPsrRequest()
-    {
-        return ServerRequestFactory::fromGlobals(['REQUEST_URI' => '/hello/World']);
-    }
-
     private function getApplication()
     {
         $application = new Application;
@@ -26,27 +19,19 @@ class ApplicationWrapperTest extends \PHPUnit_Framework_TestCase
         return $application;
     }
 
-    public function testWrapperWithDefaultFactory()
+    public function testWrapper()
     {
-        $psrRequest  = $this->getPsrRequest();
-        $application = $this->getApplication();
+        $stream = fopen('php://temp', 'r');
 
+        $request = new Request(['REQUEST_URI' => '/hello/World'], $stream);
+
+        $application        = $this->getApplication();
         $applicationWrapper = new ApplicationWrapper($application);
 
-        $psrResponse = $applicationWrapper->handleRequest($psrRequest);
+        $response = $applicationWrapper->handleRequest($request);
 
-        $this->assertEquals('Hello World', (string) $psrResponse->getBody());
-    }
+        $this->assertEquals('Hello World', $response->getContent());
 
-    public function testWrapperWithCustomFactory()
-    {
-        $psrRequest  = $this->getPsrRequest();
-        $application = $this->getApplication();
-
-        $applicationWrapper = new ApplicationWrapper($application, new HttpFoundationFactory, new DiactorosFactory);
-
-        $psrResponse = $applicationWrapper->handleRequest($psrRequest);
-
-        $this->assertEquals('Hello World', (string) $psrResponse->getBody());
+        fclose($stream);
     }
 }
