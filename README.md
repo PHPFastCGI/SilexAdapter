@@ -1,7 +1,5 @@
 # Speedex
 
-![GitHub Issues](https://img.shields.io/github/issues/PHPFastCGI/Speedex.svg)
-![GitHub Stars](https://img.shields.io/github/stars/PHPFastCGI/Speedex.svg)
 ![GitHub License](https://img.shields.io/badge/license-GPLv2-blue.svg)
 [![Build Status](https://travis-ci.org/PHPFastCGI/Speedex.svg?branch=master)](https://travis-ci.org/PHPFastCGI/Speedex)
 [![Coverage Status](https://coveralls.io/repos/PHPFastCGI/Speedex/badge.svg?branch=master)](https://coveralls.io/r/PHPFastCGI/Speedex?branch=master)
@@ -11,6 +9,12 @@ A PHP package which allows Silex applications to reduce overheads by exposing th
 ## Introduction
 
 Using this package, Silex applications can stay alive between HTTP requests whilst operating behind the protection of a FastCGI enabled web server.
+
+## Installing
+
+```sh
+composer require "phpfastcgi/speedex:0.2.*"
+```
 
 ## Usage
 
