@@ -15,7 +15,7 @@ Using this package, Silex applications can stay alive between HTTP requests whil
 ## Installing
 
 ```sh
-composer require "phpfastcgi/speedex:0.2.*"
+composer require "phpfastcgi/speedex:0.3.*"
 ```
 
 ## Usage
