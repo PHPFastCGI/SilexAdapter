@@ -21,7 +21,7 @@ Contributions and suggestions are welcome.
 ## Installing
 
 ```sh
-composer require "phpfastcgi/speedex:0.3.*"
+composer require "phpfastcgi/speedex:^0.4"
 ```
 
 ## Usage
