@@ -1,6 +1,5 @@
 # Speedex
 
-![GitHub License](https://img.shields.io/badge/license-GPLv2-blue.svg)
 [![Build Status](https://travis-ci.org/PHPFastCGI/Speedex.svg?branch=master)](https://travis-ci.org/PHPFastCGI/Speedex)
 [![Coverage Status](https://coveralls.io/repos/PHPFastCGI/Speedex/badge.svg?branch=master)](https://coveralls.io/r/PHPFastCGI/Speedex?branch=master)
 
