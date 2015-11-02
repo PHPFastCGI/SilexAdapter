@@ -1,4 +1,4 @@
-# Speedex
+# PHPFastCGI Silex Adapter
 
 [![Build Status](https://travis-ci.org/PHPFastCGI/Speedex.svg?branch=master)](https://travis-ci.org/PHPFastCGI/Speedex)
 [![Coverage Status](https://coveralls.io/repos/PHPFastCGI/Speedex/badge.svg?branch=master)](https://coveralls.io/r/PHPFastCGI/Speedex?branch=master)
@@ -9,18 +9,18 @@ Visit the [project website](http://phpfastcgi.github.io/).
 
 ## Introduction
 
-Using this package, Silex applications can stay alive between HTTP requests whilst operating behind the protection of a FastCGI enabled web server.
+Using this adapter, Silex applications can stay alive between HTTP requests whilst operating behind the protection of a FastCGI enabled web server.
 
 ## Current Status
 
-This project is currently in early stages of development and not considered stable. Importantly, this library currently lacks support for uploaded files. Also a memory leak protection feature is scheduled for integration that allows the daemon to shutdown after handling 'N' requests.
+This project is currently in early stages of development and not considered stable. Importantly, this library currently lacks support for uploaded files.
 
 Contributions and suggestions are welcome.
 
 ## Installing
 
 ```sh
-composer require "phpfastcgi/speedex:^0.4"
+composer require "phpfastcgi/silex-adapter:^0.5"
 ```
 
 ## Usage
@@ -32,11 +32,11 @@ composer require "phpfastcgi/speedex:^0.4"
 require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
 use PHPFastCGI\FastCGIDaemon\ApplicationFactory;
-use PHPFastCGI\Speedex\ApplicationWrapper;
-use Silex\Application as SilexApplication;
+use PHPFastCGI\Adapter\Silex\ApplicationWrapper;
+use Silex\Application;
 
 // Create your Silex application
-$app = new SilexApplication;
+$app = new Application;
 $app->get('/hello/{name}', function ($name) use ($app) {
     return 'Hello ' . $app->escape($name);
 });
