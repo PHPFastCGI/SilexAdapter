@@ -2,8 +2,8 @@
 
 namespace PHPFastCGI\Adapter\Silex\Tests;
 
-use PHPFastCGI\FastCGIDaemon\Http\Request;
 use PHPFastCGI\Adapter\Silex\ApplicationWrapper;
+use PHPFastCGI\FastCGIDaemon\Http\Request;
 use Silex\Application;
 
 class ApplicationWrapperTest extends \PHPUnit_Framework_TestCase
