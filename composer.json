@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PHPFastCGI\\Speedex\\": "src/"
+            "PHPFastCGI\\Adapter\\Silex\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PHPFastCGI\\Test\\Speedex\\": "test/"
+            "PHPFastCGI\\Test\\Adapter\\Silex\\": "test/"
         }
     }
 }
