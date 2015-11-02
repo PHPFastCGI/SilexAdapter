@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPFastCGI\Speedex;
+namespace PHPFastCGI\Adapter\Silex;
 
 use PHPFastCGI\FastCGIDaemon\Http\RequestInterface;
 use PHPFastCGI\FastCGIDaemon\KernelInterface;
