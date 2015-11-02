@@ -1,7 +1,7 @@
 {
-    "name": "phpfastcgi/speedex",
-    "description": "A bundle to integrate a FastCGI daemon with the Silex micro-framework",
-    "keywords": ["speedex", "silex", "fastcgi", "server", "fast cgi", "daemon"],
+    "name": "phpfastcgi/silex-adapter",
+    "description": "An adapter to integrate PHPFastCGI with the Silex micro-framework",
+    "keywords": ["silex", "fastcgi", "server", "fast cgi", "daemon"],
     "license": "GPL v2",
     "authors": [
         {
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PHPFastCGI\\Speedex\\": "src/"
+            "PHPFastCGI\\Adapter\\Silex\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PHPFastCGI\\Test\\Speedex\\": "test/"
+            "PHPFastCGI\\Test\\Adapter\\Silex\\": "test/"
         }
     }
 }
