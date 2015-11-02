@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPFastCGI\Speedex\Tests;
+namespace PHPFastCGI\Adapter\Silex\Tests;
 
 use PHPFastCGI\FastCGIDaemon\Http\Request;
-use PHPFastCGI\Speedex\ApplicationWrapper;
+use PHPFastCGI\Adapter\Silex\ApplicationWrapper;
 use Silex\Application;
 
 class ApplicationWrapperTest extends \PHPUnit_Framework_TestCase
