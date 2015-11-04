@@ -1,7 +1,10 @@
 # PHPFastCGI Silex Adapter
 
-[![Build Status](https://travis-ci.org/PHPFastCGI/Speedex.svg?branch=master)](https://travis-ci.org/PHPFastCGI/Speedex)
-[![Coverage Status](https://coveralls.io/repos/PHPFastCGI/Speedex/badge.svg?branch=master)](https://coveralls.io/r/PHPFastCGI/Speedex?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/phpfastcgi/silex-adapter/v/stable)](https://packagist.org/packages/phpfastcgi/silex-adapter)
+[![Build Status](https://travis-ci.org/PHPFastCGI/SilexAdapter.svg?branch=master)](https://travis-ci.org/PHPFastCGI/SilexAdapter)
+[![Coverage Status](https://coveralls.io/repos/PHPFastCGI/SilexAdapter/badge.svg?branch=master&service=github)](https://coveralls.io/github/PHPFastCGI/SilexAdapter?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PHPFastCGI/SilexAdapter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PHPFastCGI/SilexAdapter/?branch=master)
+[![Total Downloads](https://poser.pugx.org/phpfastcgi/silex-adapter/downloads)](https://packagist.org/packages/phpfastcgi/silex-adapter)
 
 A PHP package which allows Silex applications to reduce overheads by exposing their Request-Response structure to a FastCGI daemon.
 
