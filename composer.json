@@ -2,7 +2,7 @@
     "name": "phpfastcgi/silex-adapter",
     "description": "An adapter to integrate PHPFastCGI with the Silex micro-framework",
     "keywords": ["silex", "fastcgi", "server", "fast cgi", "daemon"],
-    "license": "GPL v2",
+    "license": "MIT",
     "authors": [
         {
             "name": "Andrew Carter",
