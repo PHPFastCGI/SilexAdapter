@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPFastCGI\Adapter\Silex\Tests;
+namespace PHPFastCGI\Test\Adapter\Silex;
 
 use PHPFastCGI\Adapter\Silex\ApplicationWrapper;
 use PHPFastCGI\FastCGIDaemon\Http\Request;
