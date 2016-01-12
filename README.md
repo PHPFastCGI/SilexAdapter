@@ -67,4 +67,10 @@ php /path/to/silex/web/command.php run
 FastCgiServer /path/to/silex/web/script.fcgi
 ```
 
+By default, the daemon will listen on FCGI_LISTENSOCK_FILENO, but it can also be configured to listen on a TCP address. For example:
+
+```sh
+php /path/to/command.php run --port=5000 --host=localhost
+```
+
 If you are using a web server such as nginx, you will need to use a process manager to monitor and run your application.
